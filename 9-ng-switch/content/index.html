@@ -1,0 +1,33 @@
+<html ng-app="app">
+  <head>
+    <title>My Angular app</title>
+    <script src="js/angular.js"></script>
+  </head>
+  <body>
+    <div ng-controller="MoviesController as movies">
+      <ul>
+        <li ng-repeat="movie in movies.favorites">
+          <p>{{ movie.title }}</p>
+          <p>Released in: {{ movie.year }}</p>
+          <div ng-switch="movie.category">
+            <div ng-switch-when="action">
+              Action movie!
+            </div>
+            <div ng-switch-when="thriller">
+              Thriller movie!
+            </div>
+            <div ng-switch-when="fantasy">
+              Fantasy movie!
+            </div>
+            <div ng-switch-default>
+              Movie has no category
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/MoviesController.js"></script>
+  </body>
+</html>

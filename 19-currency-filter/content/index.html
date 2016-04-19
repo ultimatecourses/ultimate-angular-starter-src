@@ -1,0 +1,20 @@
+<html ng-app="app">
+  <head>
+    <title>My Angular app</title>
+    <meta charset="utf-8">
+    <script src="js/angular.js"></script>
+    <style>
+    a { margin: 10px 10px 10px 0; display: inline-block; background: #f9f9f9; color: #444; padding: 8px 10px;}
+    </style>
+  </head>
+  <body>
+    <div ng-controller="MainController as main">
+      <p>
+        {{ main.myAmount | currency:'£':1 }}
+      </p>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/MainController.js"></script>
+  </body>
+</html>

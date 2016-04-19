@@ -1,0 +1,23 @@
+<html ng-app="app">
+  <head>
+    <title>My Angular app</title>
+    <script src="js/angular.js"></script>
+  </head>
+  <body>
+    <div ng-controller="MoviesController as movies">
+      <ul>
+        <li ng-repeat="movie in movies.favorites">
+          <p>{{ movie.title }}</p>
+          <p>Released in: {{ movie.year }}</p>
+          <p ng-show="movie.popular">This movie is popular!</p>
+          <p ng-show="movie.year > '2000'">
+            This movie is quite new!
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/MoviesController.js"></script>
+  </body>
+</html>

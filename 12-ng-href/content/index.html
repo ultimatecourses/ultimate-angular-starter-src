@@ -1,0 +1,37 @@
+<html ng-app="app">
+  <head>
+    <title>My Angular app</title>
+    <script src="js/angular.js"></script>
+    <style>
+      .old {background: red;}
+      .modern {background: blue;}
+      .new {background: green;}
+      img {
+        max-width: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div ng-controller="MoviesController as movies">
+      <ul>
+        <li
+          ng-class="{
+            old: movie.year < 1995,
+            modern: movie.year > 1995 && movie.year < 2000,
+            new: movie.year > 2000
+          }"
+          ng-repeat="movie in movies.favorites">
+          <img ng-src="//ia.media-imdb.com/images/{{movie.img}}" alt="">
+          <a ng-href="//imdb.com/title/{{movie.imdb}}" target="_blank">
+            {{ movie.title }}
+          </a>
+          <p>Released in: {{ movie.year }}</p>
+          <input type="text" ng-model="movie.year">
+        </li>
+      </ul>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/MoviesController.js"></script>
+  </body>
+</html>

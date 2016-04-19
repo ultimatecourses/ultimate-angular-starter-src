@@ -1,0 +1,23 @@
+<html ng-app="app">
+  <head>
+    <title>My Angular app</title>
+    <meta charset="utf-8">
+    <script src="js/angular.js"></script>
+  </head>
+  <body>
+    <div>
+      <form ng-submit="user.getUser();">
+        <input
+          type="text"
+          ng-model="user.userId"
+          stretch>
+        <button type="submit">
+          Search user
+        </button>
+      </form>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/stretch.directive.js"></script>
+  </body>
+</html>

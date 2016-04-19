@@ -1,0 +1,44 @@
+<html ng-app="app">
+  <head>
+    <title>My Angular app</title>
+    <script src="js/angular.js"></script>
+    <style>
+    .likes {
+      background: #f9f9f9;
+      border-radius: 3px;
+      border: 1px solid #e5e5e5;
+      padding: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <div ng-controller="MoviesController as movies">
+      <div class="likes">
+        <p>
+          Todd's like list
+        </p>
+        <ul>
+          <li ng-repeat="like in movies.likesList">
+            <p>{{ like.title }}</p>
+            <a href="" ng-click="movies.unlike($index);">
+              Unlike!
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul>
+        <li ng-repeat="movie in movies.favorites">
+          <p>
+            {{ movie.title }}
+          </p>
+          <a href="" ng-click="movies.addToLikes(movie);">
+            Like this movie
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/MoviesController.js"></script>
+  </body>
+</html>

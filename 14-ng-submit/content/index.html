@@ -1,0 +1,45 @@
+<html ng-app="app">
+  <head>
+    <title>My Angular app</title>
+    <script src="js/angular.js"></script>
+    <style>
+    form {
+      background: #f9f9f9;
+      border-radius: 3px;
+      border: 1px solid #e5e5e5;
+      padding: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <div ng-controller="MoviesController as movies">
+      <form ng-submit="movies.addMovie();">
+        <p>
+          Add a movie
+        </p>
+        <input
+          type="text"
+          placeholder="Title"
+          ng-model="movies.newTitle">
+        <input
+          type="text"
+          placeholder="Release year"
+          ng-model="movies.newRelease">
+        <button type="submit">
+          Add new movie!
+        </button>
+      </form>
+      <ul>
+        <li ng-repeat="movie in movies.favorites">
+          <p>
+            {{ movie.title }} {{ $index }}
+          </p>
+          <p>Released in: {{ movie.year }}</p>
+        </li>
+      </ul>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/MoviesController.js"></script>
+  </body>
+</html>
