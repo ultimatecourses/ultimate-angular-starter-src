@@ -3,10 +3,7 @@ function OrderController() {
     name: '',
     email: '',
     location: '',
-    product: {
-      label: '',
-      id: ''
-    },
+    product: '',
     comments: ''
   };
   this.submitOrder = function () {
