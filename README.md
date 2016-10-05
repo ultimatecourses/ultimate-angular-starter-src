@@ -1,6 +1,12 @@
+<a href="https://ultimateangular.com" target="_blank"><img src="https://toddmotto.com/img/ua.png"></a>
+
+# Ultimate Angular: Fundamentals Source Code
+
+> This repo serves as the source files for the Ultimate Angular 1.x Fundamentals course. Come and [learn Angular](https://ultimateangular.com) 1.5 architecture, latest features, components and more!
+
 # Starter Sourcecode
 
-The Starter Course fundamentals source code for Ultimate AngularJS [Starter course](https://courses.toddmotto.com).
+The Starter Course fundamentals source code for Ultimate Angular 1.x [Fundamentals course](https://ultimateangular.com).
 
 ### Running these projects
 
